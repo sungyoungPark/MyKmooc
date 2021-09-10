@@ -70,8 +70,8 @@
 		5B3178F726E504F800718494 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5BEFEE8A26EB480F00076DE0 /* Cell */,
 				5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */,
+				5BEFEE8A26EB480F00076DE0 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";

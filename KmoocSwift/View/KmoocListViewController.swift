@@ -66,5 +66,17 @@ class KmoocListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("scroll")
+        let contentHeight = scrollView.contentSize.height
+        let offset = scrollView.contentOffset.y
+     
+        if offset > contentHeight - scrollView.frame.height{ 
+            print("오버")
+            viewModel.listUP()
+        }
+        
+    }
 }
 

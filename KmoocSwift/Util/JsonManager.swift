@@ -19,9 +19,9 @@ class JsonManager {
     
     let apiURL = "http://apis.data.go.kr/B552881/kmooc/courseList?ServiceKey="
     
-    func getJson( completed: @escaping (ClassList) -> Void) {
+    func getJson(pageNum : Int ,completed: @escaping (ClassList) -> Void) {
     
-        if let URL = URL(string: apiURL + apiKeyEncoding) {
+        if let URL = URL(string: apiURL + apiKeyEncoding + "&page=\(pageNum)") {
             URLSession.shared.dataTask(with: URL) { data, response, error in
                 if let data = data {
                     do {
@@ -32,11 +32,12 @@ class JsonManager {
                                 self.getClass(data: try? JSONSerialization.data(withJSONObject: $0, options: .prettyPrinted))
                             }
 //                            print("classes", classes)
-                            completed(ClassList(classes: classes))
+                            print("success",URL)
+                            completed(ClassList(lastPageNum: pageNum, classes: classes))
                         }
                     }
                     catch {
-                        print("error")
+                        print("error",URL)
                     }
                 }
             }.resume()
