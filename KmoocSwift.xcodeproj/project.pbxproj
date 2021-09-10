@@ -12,6 +12,7 @@
 		5B625FD326E3DA6200E9DB14 /* KmoocListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */; };
 		5B625FD826E3DA6300E9DB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B625FD726E3DA6300E9DB14 /* Assets.xcassets */; };
 		5B625FDB26E3DA6300E9DB14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B625FD926E3DA6300E9DB14 /* LaunchScreen.storyboard */; };
+		5B83F82726EBA0B500AE3598 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B83F82626EBA0B500AE3598 /* ImageManager.swift */; };
 		5BE95AA126E9DDC400AE6ACC /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE95AA026E9DDC400AE6ACC /* JsonManager.swift */; };
 		5BEFEE7C26EB1FA400076DE0 /* KmoocListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFEE7B26EB1FA400076DE0 /* KmoocListViewModel.swift */; };
 		5BEFEE8126EB201800076DE0 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFEE8026EB201800076DE0 /* Class.swift */; };
@@ -27,6 +28,7 @@
 		5B625FD726E3DA6300E9DB14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B625FDA26E3DA6300E9DB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B625FDC26E3DA6300E9DB14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83F82626EBA0B500AE3598 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		5BE95AA026E9DDC400AE6ACC /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		5BEFEE7B26EB1FA400076DE0 /* KmoocListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmoocListViewModel.swift; sourceTree = "<group>"; };
 		5BEFEE8026EB201800076DE0 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				5BE95AA026E9DDC400AE6ACC /* JsonManager.swift */,
+				5B83F82626EBA0B500AE3598 /* ImageManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				5BEFEE8126EB201800076DE0 /* Class.swift in Sources */,
 				5B625FD326E3DA6200E9DB14 /* KmoocListViewController.swift in Sources */,
 				5BEFEE8826EB2A5B00076DE0 /* ClassList.swift in Sources */,
+				5B83F82726EBA0B500AE3598 /* ImageManager.swift in Sources */,
 				5BE95AA126E9DDC400AE6ACC /* JsonManager.swift in Sources */,
 				5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */,
 				5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */,

@@ -31,6 +31,7 @@ class JsonManager {
                             let classes = res.map {
                                 self.getClass(data: try? JSONSerialization.data(withJSONObject: $0, options: .prettyPrinted))
                             }
+//                            print("classes", classes)
                             completed(ClassList(classes: classes))
                         }
                     }

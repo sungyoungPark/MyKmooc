@@ -25,6 +25,7 @@ class KmoocListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(ClassTableViewCell.classForCoder(), forCellReuseIdentifier: "myClass")
         
         view.addSubview(tableView)
         
@@ -34,6 +35,7 @@ class KmoocListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         viewModel.listUpdate = { [weak self] in
             DispatchQueue.main.async {
+                print("list update")
                 self?.tableView.reloadData()
             }
         }
@@ -48,13 +50,21 @@ class KmoocListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ClassTableViewCell()
-        cell.drawCell(myClass: viewModel.indexClass(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myClass") as! ClassTableViewCell
+        
+        if let myClass = viewModel.indexClass(indexPath: indexPath){
+            cell.drawCell(myClass: myClass)
+        }
+       
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let celClass = viewModel.indexClass(indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 

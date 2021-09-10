@@ -29,9 +29,10 @@ class KmoocListViewModel {
         }
     }
     
-    func indexClass(indexPath : IndexPath) -> Class {
-        print(classesList.classes[indexPath.row])
-        return classesList.classes[indexPath.row] ?? Class(name: "", org_name: "")
+    func indexClass(indexPath : IndexPath) -> Class? {
+//        print(classesList.classes[indexPath.row])
+//        print(classesList.classes[indexPath.row]?.class_image.image["raw"])
+        return classesList.classes[indexPath.row]
     }
     
 }
