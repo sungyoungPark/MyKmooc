@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1F83522764FEC70065DD81 /* KmoocDetailCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F83512764FEC70065DD81 /* KmoocDetailCourseViewController.swift */; };
 		5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3178F826E5051D00718494 /* ClassTableViewCell.swift */; };
 		5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */; };
 		5B625FD326E3DA6200E9DB14 /* KmoocListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1F83512764FEC70065DD81 /* KmoocDetailCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmoocDetailCourseViewController.swift; sourceTree = "<group>"; };
 		5B3178F826E5051D00718494 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		5B625FCB26E3DA6200E9DB14 /* KmoocSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KmoocSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */,
+				5B1F83512764FEC70065DD81 /* KmoocDetailCourseViewController.swift */,
 				5BEFEE8A26EB480F00076DE0 /* Cell */,
 			);
 			path = View;
@@ -262,6 +265,7 @@
 				5B83F82726EBA0B500AE3598 /* ImageManager.swift in Sources */,
 				5BE95AA126E9DDC400AE6ACC /* JsonManager.swift in Sources */,
 				5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */,
+				5B1F83522764FEC70065DD81 /* KmoocDetailCourseViewController.swift in Sources */,
 				5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */,
 				5BEFEE7C26EB1FA400076DE0 /* KmoocListViewModel.swift in Sources */,
 			);
