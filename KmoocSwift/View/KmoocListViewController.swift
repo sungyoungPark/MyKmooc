@@ -61,7 +61,9 @@ class KmoocListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellClass = viewModel.indexClass(indexPath: indexPath)
-       
+        let courseURL = "http://apis.data.go.kr/B552881/kmooc/courseDetail?ServiceKey=" + JsonManager.shared.apiKeyEncoding + "&CourseId=" + (cellClass?.course_id ?? "")
+        print(courseURL)
+    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
