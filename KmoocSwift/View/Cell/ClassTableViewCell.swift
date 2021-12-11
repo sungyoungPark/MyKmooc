@@ -15,33 +15,59 @@ class ClassTableViewCell: UITableViewCell {
     let classLabel : UILabel = {
         let label = UILabel()
         label.textColor = .black
+        label.numberOfLines = 0
         return label
     }()
     
     let agencyLabel = UILabel()
     let dateLabel = UILabel()
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        print("init")
+        setUI()
+    }
+
+        
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    func drawCell(myClass : Class){
+    
+    func setUI(){
         self.contentView.backgroundColor = .white
         self.contentView.addSubview(thumbImageView)
         
         thumbImageView.snp.makeConstraints { (maker) in
-            maker.leading.equalTo(0)
-            maker.top.equalTo(0)
-            maker.bottom.equalTo(0)
+            maker.leading.equalTo(10)
+            maker.top.equalTo(10)
+            maker.bottom.equalTo(-10)
             maker.width.equalTo(165)
         }
+        
+        let classLabelView = UIView()
+        self.contentView.addSubview(classLabelView)
+        classLabelView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(10)
+            maker.trailing.equalTo(-10)
+            maker.bottom.equalTo(-10)
+            maker.leading.equalTo(thumbImageView.snp.trailing).offset(8)
+        }
+        
+        classLabelView.addSubview(classLabel)
+        classLabel.snp.makeConstraints { maker in
+            maker.top.bottom.leading.trailing.equalTo(0)
+        }
+    }
+    
+    func drawCell(myClass : Class){
+
         
         ImageManager.shared.setImage(link: myClass.class_image.image["raw"]! , completion: { [weak self] (image) in
             self?.thumbImageView.image = image
         })
-       
-        self.contentView.addSubview(classLabel)
-        classLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(10)
-            maker.leading.equalTo(thumbImageView.snp.trailing).offset(8)
-        }
+
         classLabel.text = myClass.name
         
     }
@@ -50,5 +76,6 @@ class ClassTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         thumbImageView.image = nil
         classLabel.text = ""
+        print("reuse")
     }
 }
